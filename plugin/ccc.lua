@@ -6,8 +6,8 @@ vim.g.loaded_ccc = true
 require("ccc").setup()
 
 vim.api.nvim_create_user_command("CccPick", function()
-  vim.cmd("stopinsert")
   require("ccc.ui"):open(false)
+  vim.cmd("stopinsert")
 end, {})
 
 vim.keymap.set("i", "<Plug>(ccc-insert)", function()
